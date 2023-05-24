@@ -202,6 +202,17 @@ body {
     -webkit-tap-highlight-color: transparent
 }
 
+
+
+.navbar-expand-lg,
+.bg-body-tertiary,
+.navbar {
+
+    margin-bottom: 0px;
+}
+
+
+
 hr {
     margin: 1rem 0;
     color: inherit;
@@ -828,8 +839,8 @@ progress {
 
     .container,
     .container-lg,
-    .container-md,s-gutter-x
-    .container-sm,
+    .container-md,
+    s-gutter-x .container-sm,
     .container-xl,
     .container-xxl {
         max-width: 1320px

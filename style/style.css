@@ -12,6 +12,9 @@ a:hover {
     text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+}
 
 
 .navbar-nav>li>a {
@@ -30,7 +33,8 @@ a:hover {
 .glyphicon-cog:before,
 .glyphicon-folder-open:before,
 .glyphicon-earphone:before,
-.glyphicon-hdd:before {
+.glyphicon-hdd:before,
+.glyphicon-picture {
     color: #a80505;
     margin-right: 5px;
 }
@@ -204,9 +208,9 @@ section {
 
 }
 
-.icon {
+.icon-main {
     color: rgb(168, 5, 5);
-    font-size: 8em;
+    font-size: 4em;
     text-align: center;
 }
 
@@ -251,7 +255,8 @@ section {
 }
 
 .project-image img {
-    width: 100%;
+    width: 250px;
+    height: 140px;
 }
 
 .project-info {
@@ -264,6 +269,8 @@ section {
     padding-top: 5px;
     font-size: 13px;
     text-align: center;
+    text-decoration: none;
+    color: #9c0505;
 }
 
 
@@ -273,6 +280,7 @@ section {
     text-transform: uppercase;
     font-weight: 800;
     margin-top: 10px;
+    text-decoration: none;
 }
 
 
@@ -288,7 +296,6 @@ section {
 
 
 
-
 .footer-title {
     font-size: 1.3em;
     color: #fff;
@@ -299,6 +306,15 @@ section {
     color: rgb(231, 194, 194);
 }
 
+.a-direction {
+    text-decoration: none;
+    color: rgb(231, 194, 194);
+
+}
+
+.a-direction:hover {
+    color: rgb(150, 147, 147);
+}
 
 .a-card-content {
     color: #a80505;
@@ -389,7 +405,7 @@ section {
 
 .footer .foot {
     position: absolute;
-    bottom: 1;
+    bottom: 1px;
     background-color: #9b3e3e;
     color: white;
     display: flex;
@@ -437,4 +453,280 @@ section {
     .body-img-Projects {
         background-image: linear-gradient(rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.5)), url(../images/back-Projects480.jpg);
     }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* start get photo */
+
+
+input {
+    box-shadow: none;
+}
+
+.body-img-get-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.195), rgba(0, 0, 0, 0.216)), url(../images/back-get-photo.jpg);
+    background-size: cover;
+}
+
+.button-57 {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    color: #18181a;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.button-57 span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 8px;
+}
+
+.button-57:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #71869c;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.button-57:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.waraper {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 35px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media(max-width:767px) {
+    .waraper {
+        padding: 20px;
+        backdrop-filter: blur(0px);
+    }
+
+    .body-img-get-photo {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.195), rgba(0, 0, 0, 0.216)), url(../images/back-get-photo00.jpg);
+    }
+}
+
+.waraper .box {
+    width: 100%;
+    padding: 40px;
+}
+
+@media(max-width:767px) {
+    .waraper .box {
+        padding: 20px;
+    }
+}
+
+.waraper .box h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.input-nox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.input-nox label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+.inputmode {
+    position: relative;
+}
+
+.inputmode input {
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: rgba(121, 189, 33, 0);
+    padding: 1px 1px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    height: 30px;
+}
+
+.inputmode input:focus {
+    outline: none;
+}
+
+.inputmode input::placeholder {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.inputmode span {
+    position: absolute;
+    background-color: #5f0606;
+    transition: transform 0.5s ease;
+}
+
+.inputmode .bottom,
+.inputmode .top {
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+}
+
+.inputmode .bottom {
+    bottom: 0;
+    transform-origin: bottom right;
+}
+
+.inputmode input:focus~.bottom {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.inputmode .top {
+    top: -5;
+    transform-origin: top left;
+}
+
+.inputmode input:focus~.top {
+    transform-origin: top right;
+    transform: scaleX(1);
+}
+
+.icon {
+    position: absolute;
+    left: 8px;
+    font-size: 20px;
+    line-height: 50px;
+    top: 12px;
+}
+
+.forgit {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.bi,
+.bi-person {
+    color: #ecd0d0;
+}
+
+.btn-rig {
+    border: none;
+    padding: 10px 10px;
+    font-size: 25px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.btn-rig:hover {
+    color: white;
+    background-color: rgb(70, 2, 2);
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.forgit label {
+    display: flex;
+    gap: 10px;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* end get photo */
+
+
+
+
+.inputmode :nth-child(1) {
+    padding-left: 30px;
+    padding-bottom: 7px;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.inputmode :nth-child(1):hover {
+    background-color: #ff585818;
 }
